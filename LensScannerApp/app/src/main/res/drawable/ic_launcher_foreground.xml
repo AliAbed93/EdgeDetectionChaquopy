@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Lens shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 C70,30 82,42 82,54 C82,66 70,78 54,78 C38,78 26,66 26,54 C26,42 38,30 54,30 Z M54,38 C42,38 34,46 34,54 C34,62 42,70 54,70 C66,70 74,62 74,54 C74,46 66,38 54,38 Z"/>
+    <!-- Scan line -->
+    <path
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2"
+        android:pathData="M30,54 L78,54"/>
+</vector>
