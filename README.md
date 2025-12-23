@@ -150,7 +150,7 @@ Output SVG File
 - JDK 17
 - Android SDK 34
 
-### Build Steps
+### Local Build
 
 1. Open the project in Android Studio
 2. Sync Gradle (Chaquopy will download Python packages)
@@ -158,9 +158,29 @@ Output SVG File
 
 ```bash
 # Command line build
-cd LensScannerApp
 ./gradlew assembleDebug
 ```
+
+### Building with Codemagic
+
+This project is configured for Codemagic CI/CD:
+
+1. **Connect Repository**: Link your Git repository to Codemagic
+2. **Project Detection**: Codemagic will automatically detect the Android project at the root
+3. **Configuration**: The `codemagic.yaml` file contains the build workflow
+4. **Build**: Trigger a build manually or via Git push
+
+**Important Notes:**
+- The project root contains `build.gradle.kts`, `settings.gradle.kts`, and `app/` folder
+- Chaquopy will automatically download Python packages (numpy, opencv-python, scipy, svgwrite) during build
+- First build may take 10-15 minutes due to Python package downloads
+- Subsequent builds are faster with caching
+
+**Codemagic Configuration:**
+- Instance: Mac Mini M1 (required for Android builds)
+- Java: 17
+- Build timeout: 60 minutes
+- Artifacts: APK and AAB files
 
 ## Usage
 
